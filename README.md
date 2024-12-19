@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Enerdit Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Enerdit is a web application designed to help users understand and manage household energy consumption. The frontend is built using React and provides a user-friendly interface for conducting energy audits, viewing reports, and managing user accounts.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- User authentication (signup, login, email verification)
+- Energy audit functionality
+- Dynamic dashboard displaying energy consumption data
+- Responsive design for mobile and desktop
+- Integration with various libraries for charts and data visualization
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React**: A JavaScript library for building user interfaces.
+- **React Router**: For routing and navigation.
+- **Axios**: For making HTTP requests to the backend API.
+- **Tailwind CSS**: For styling and responsive design.
+- **Recharts**: For data visualization through charts.
+- **Yup**: For form validation.
+- **React Hook Form**: For managing form state and validation.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+To get started with the Enerdit frontend, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/yourusername/enerdit-frontend.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project directory:
 
-### `npm run eject`
+   ```bash
+   cd enerdit-frontend
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install the dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Create a `.env` file in the root directory and add the following environment variables:
+   ```
+   REACT_APP_API_BASE_URL=http://localhost:8000/api
+   REACT_APP_GOOGLE_CLIENT_ID=your_google_client_id
+   REACT_APP_GOOGLE_APP_REDIRECT_URI=http://localhost:3000/auth-callback
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
 
-## Learn More
+To run the application in development mode, use the following command:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This will start the development server and open the application in your default web browser at `http://localhost:3000`.
 
-### Code Splitting
+## Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The project has the following folder structure:
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+enerdit-frontend/
+├── public/                  # Static files
+│   ├── index.html          # Main HTML file
+│   ├── manifest.json       # Web app manifest
+│   └── favicon.ico         # Favicon
+├── src/                     # Source files
+│   ├── components/          # Reusable components
+│   ├── pages/              # Page components
+│   ├── services/           # API service functions
+│   ├── styles/             # CSS files
+│   ├── App.js              # Main application component
+│   └── index.js            # Entry point
+├── .gitignore               # Git ignore file
+├── package.json             # Project metadata and dependencies
+└── README.md                # Project documentation
+```
